@@ -54,7 +54,7 @@
                         <p class="control">
                         <form method="POST" action="{% url 'logout' %}">
                             {% csrf_token %}
-                            <input type="submit" value='Logout'>
+                            <input type="submit" value='Logout' class="button is-danger">
                         </form>
                         </p>
                     </div>

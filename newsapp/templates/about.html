@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <title>News App</title>
+</head>
+
+<body>
+
+    <nav class="navbar is-black">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://cdn.jim-nielsen.com/macos/128/news-2021-05-25.png" alt="news app">
+            </a>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="{% url 'index' %}">
+                    News
+                </a>
+                <a class="navbar-item" href="{% url 'about' %}">
+                    About
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="bd-tw-button button" href="{% url 'login' %}">
+                                <span>
+                                    Sign In
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-danger" href="{% url 'register' %}">
+                                <span>Sign Up</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <img src="https://miro.medium.com/max/1000/1*G8aV_j9wxGXS5SMDAL-R0Q.jpeg" alt="company">
+            <br> <br>
+            <p>
+                Here in XYZ we care do deliver the most important News on time for YOU!
+            </p> <br> <br> <br>
+
+            <p>
+                XYZ News is an operational business division
+                responsible for the gathering and broadcasting of news and current affairs in the UK and around the
+                world. The department is the world's largest broadcast news organisation and generates about 120 hours
+                of radio and television output each day, as well as online news coverage. The service maintains 50
+                foreign news bureaus with more than 250 correspondents around the world. Deborah Turness has been the
+                CEO of news and current affairs since September 2022.
+            </p><br> <br> <br>
+            <p>
+                In 2019, it was reported in an Ofcom report that the XYZ spent £136m on news during the period April
+                2018 to March 2019. XYZ News' domestic, global and online news divisions are housed within the
+                largest live newsroom in Europe, in Broadcasting House in central London. Parliamentary coverage is
+                produced and broadcast from studios in London. Through XYZ English Regions, the XYZ also has regional
+                centres across England and national news centres in Northern Ireland, Scotland and Wales. All nations
+                and English regions produce their own local news programmes and other current affairs and sport
+                programmes.
+            </p><br> <br> <br>
+
+            <p>
+                The XYZ is a quasi-autonomous corporation authorised by royal charter, making it operationally
+                independent of the government.
+            </p><br> <br> <br>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>News App</strong> was created by the company <a href="">XYZ</a>. If you have any questions,
+                please contact
+                us: <a href="">0 32 22 22 22</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

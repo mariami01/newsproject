@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <title>News App</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar is-black">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://cdn.jim-nielsen.com/macos/128/news-2021-05-25.png" alt="news app">
+            </a>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="{% url 'index' %}">
+                    News
+                </a>
+                <a class="navbar-item" href="{% url 'about' %}">
+                    About
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="bd-tw-button button" href="/login">
+                                <span>
+                                    Sign In
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-danger" href="/register">
+                                <span>Sign Up</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /Header -->
+
+
+    <!-- Content -->
+    <br><br><br><br>
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <div style="border: 1px; width: 400px; text-align: center;  margin: 0 auto;">
+            <h1 style="font-size:20px;">Log In</h1> <br><br>
+
+            <!-- <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="Name" placeholder="Name" for="name">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div> -->
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Username" for="username" name="username">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password" for="password" name="password">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-danger" value="login" type="submit">
+                        Login
+                    </button>
+                </p>
+            </div>
+        </div> <br><br><br><br>
+    </form>
+
+    <!-- /Content -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>News App</strong> was created by the company <a href="">XYZ</a>. If you have any questions,
+                please contact
+                us: <a href="">0 32 22 22 22</a>
+            </p>
+        </div>
+    </footer>
+    <!-- /Footer -->
+</body>
+
+</html>

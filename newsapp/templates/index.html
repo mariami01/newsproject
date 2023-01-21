@@ -28,6 +28,7 @@
                 </a>
             </div>
 
+            {% if not user.is_authenticated %}
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="field is-grouped">
@@ -46,6 +47,20 @@
                     </div>
                 </div>
             </div>
+            {% else %}
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                        <form method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <input type="submit" value='Logout'>
+                        </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </nav>
     <section class="section">

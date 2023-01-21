@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 
 # Create your forms here.
-class User(models.Model):
-    name = models.CharField(max_length=50)
-    username = models.CharField(max_length=50)
-    email = models.EmailField(unique=True)
-    password = models.CharField(max_length=20)
+# class User(models.Model):
+#     name = models.CharField(max_length=100)
+#     username = models.CharField(max_length=100)
+#     email = models.emil(max_length=100)
+#     password = models.CharField(max_length=500)
